@@ -5,13 +5,13 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Dataset: XJTU Gearbox](https://img.shields.io/badge/dataset-XJTU%20Gearbox-purple)](https://www.sciencedirect.com/science/article/pii/S2352340919309904)
 
-**PG-AMF v4** is a physics-guided deep learning framework for rotating machinery bearing fault diagnosis. It replaces fixed hand-crafted statistical features with *learnable generalised moment exponents* that adapt to the fault type during training — achieving **100% test accuracy** on the XJTU Gearbox Bearing 61800 dataset with 5-class fault classification (Normal, Ball, Inner Race, Compound, Outer Race).
+**PG-AMF v4** is a physics-guided deep learning framework for rotating machinery bearing fault diagnosis. It replaces fixed hand-crafted statistical features with *learnable generalised moment exponents* that adapt to the fault type during training, achieving **100% test accuracy** on the XJTU Gearbox Bearing 61800 dataset with 5-class fault classification (Normal, Ball, Inner Race, Compound, Outer Race).
 
 ---
 
 ## Key Results
 
-> Trained and evaluated on the **XJTU Gearbox Bearing 61800** dataset — 11.6 million raw vibration samples, two accelerometer channels, five fault classes, 200 segments per class at 20 480 Hz.
+> Trained and evaluated on the **XJTU Gearbox Bearing 61800** dataset 11.6 million raw vibration samples, two accelerometer channels, five fault classes, 200 segments per class at 20 480 Hz.
 
 ### Hold-Out Test Set (150 samples)
 
@@ -20,7 +20,7 @@
 | (a) Statistical MLP — 12 fixed features | 96.00% | 0.960 | 10 245 |
 | **(b) PG-AMF v4 — learned α exponents** | **100.00%** | **1.000** | **44 065** |
 
-PG-AMF achieves a **perfect diagonal confusion matrix** across all five fault types including the hardest case — Compound multi-fault (Inner + Outer + Ball simultaneously).
+PG-AMF achieves a **perfect diagonal confusion matrix** across all five fault types including the hardest case: Compound multi-fault (Inner + Outer + Ball simultaneously).
 
 ### 5-Fold Cross-Validation
 
