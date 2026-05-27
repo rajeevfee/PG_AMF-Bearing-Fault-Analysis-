@@ -1,0 +1,28 @@
+# =============================================================================
+# Training Hyper-parameter Configuration
+# =============================================================================
+
+# ── Shared ────────────────────────────────────────────────────────────────────
+epochs: 200
+batch_size: 64
+patience: 25           # Early stopping patience
+n_folds: 5             # Stratified K-Fold cross-validation
+
+# ── Branch (a) — Statistical MLP — Basic Training ────────────────────────────
+stat_mlp:
+  optimizer: adam
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  loss: cross_entropy   # plain CE, no scheduling, no gradient clipping
+
+# ── Branch (b) — PG-AMF — Smooth Training ────────────────────────────────────
+pgamf:
+  optimizer: adamw
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  scheduler: cosine_annealing   # CosineAnnealingLR
+  eta_min_ratio: 0.05           # eta_min = lr * eta_min_ratio
+  loss: focal_ce                # Focal CE + diversity + compactness
+  focal_gamma: 2.0
+  label_smoothing: 0.05
+  grad_clip_norm: 2.0

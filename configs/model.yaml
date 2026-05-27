@@ -1,0 +1,21 @@
+# =============================================================================
+# Model Architecture Configuration
+# =============================================================================
+
+pgamf:
+  F: 10                  # Number of learnable α exponents per channel
+  alpha_min: 0.5
+  alpha_max: 5.0
+  n_channels: 2
+  hidden_size: 128
+  lambda_div: 0.01       # Diversity regularisation weight
+  lambda_compact: 0.005  # Cosine compactness regularisation weight
+
+# Moment families used by PGAMFLayer:
+#   1. Absolute   : (1/T) Σ |x_t|^αᵢ
+#   2. Signed     : (1/T) Σ sign(x_t)|x_t|^αᵢ   (asymmetry-aware)
+#   3. AC-coupled : (1/T) Σ |x_t − x̄|^αᵢ        (DC-suppressed)
+# ⟹ Feature dim per channel = F × 3
+
+baseline_mlp:
+  hidden_size: 128

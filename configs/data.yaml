@@ -1,0 +1,29 @@
+# =============================================================================
+# Data & Signal Processing Configuration
+# =============================================================================
+
+signal:
+  fs: 20480            # Sampling frequency [Hz]
+  seg_len: 8192        # Segment length [samples]
+  overlap: 0.50        # Overlap fraction
+  hop: 4096            # Hop size (= seg_len * (1 - overlap))
+  min_segs: 50         # Minimum segments per class (skip otherwise)
+  max_segs: 200        # Maximum segments per class (cap)
+  do_mean_removal: true
+
+# Bearing 61800 geometry (used for fault characteristic frequencies)
+bearing:
+  n_balls: 7           # Nb
+  ball_diameter: 2.1   # Bd [mm]
+  pitch_diameter: 14.5 # Pd [mm]
+  shaft_freq: 30.0     # fr [Hz]
+
+# Derived characteristic frequencies are computed at runtime:
+#   BPFO = (Nb/2) * fr * (1 - Bd/Pd)
+#   BPFI = (Nb/2) * fr * (1 + Bd/Pd)
+#   BSF  = (Pd/(2*Bd)) * fr * (1 - (Bd/Pd)^2)
+#   FTF  = (fr/2) * (1 - Bd/Pd)
+
+splits:
+  val_split: 0.20
+  test_split: 0.15

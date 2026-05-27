@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+.conda/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Outputs (keep folder structure, ignore generated files)
+outputs/checkpoints/*.pt
+outputs/figures/*.png
+outputs/results/*.json
+
+# Data (real datasets are not committed)
+data/processed/
+data/sample/*.txt
+data/sample/*.csv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+*.tmp

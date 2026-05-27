@@ -1,0 +1,48 @@
+# =============================================================================
+# PG-AMF Bearing Fault Diagnosis — Default Configuration
+# Override individual fields in model.yaml / train.yaml / data.yaml
+# =============================================================================
+
+project_name: pg_amf_bearing
+seed: 42
+device: auto          # "auto" → CUDA if available, else CPU
+
+paths:
+  data_root: data/sample            # override with your XJTU_Gearbox path
+  outputs: outputs
+  checkpoints: outputs/checkpoints
+  figures: outputs/figures
+  results: outputs/results
+
+# Fault types must match folder names under data_root
+fault_types:
+  - "1ndBearing_Normal"
+  - "1ndBearing_ball"
+  - "1ndBearing_inner"
+  - "1ndBearing_mix(inner+outer+ball)"
+  - "1ndBearing_outer"
+
+fault_labels:
+  "1ndBearing_Normal":                "Normal"
+  "1ndBearing_ball":                  "Ball"
+  "1ndBearing_inner":                 "Inner Race"
+  "1ndBearing_mix(inner+outer+ball)": "Compound"
+  "1ndBearing_outer":                 "Outer Race"
+
+fault_colors:
+  - "#2196F3"
+  - "#4CAF50"
+  - "#FF9800"
+  - "#9C27B0"
+  - "#F44336"
+
+channel_files:
+  - Data_Chan1.txt
+  - Data_Chan2.txt
+skip_header: 15
+
+ieee_style:
+  font_family: serif
+  font_size: 10
+  figure_dpi: 150
+  savefig_dpi: 300
