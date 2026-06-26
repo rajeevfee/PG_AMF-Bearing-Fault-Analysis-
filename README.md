@@ -141,7 +141,9 @@ Override on the command line: `python scripts/train.py --epochs 300 --batch_size
   year      = {2026},
 }
 ```
+PG-AMF: Physics-Guided Adaptive Moment Features for Bearing Fault Diagnosis 
 
+[![PG-AMF: Physics-Guided Adaptive Moment Features for Bearing Fault Diagnosis )]([https://www.sciencedirect.com/science/article/pii/S2352340919309904](https://arxiv.org/abs/2606.26317))
 ---
 
 ## License
