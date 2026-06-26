@@ -134,16 +134,19 @@ Override on the command line: `python scripts/train.py --epochs 300 --batch_size
 ## Citation
 
 ```bibtex
-@inproceedings{pgamf2025,
-  title     = {Physics-Guided Adaptive Moment Features for Bearing Fault Diagnosis},
-  author    = {[Rajeev Kumar]},
-  booktitle = {[Chandicon 2026]},
-  year      = {2026},
+@misc{kumar2026parametricgeneralizedadaptivemoment,
+      title={Parametric Generalized Adaptive Moment Features (PG-AMF) for Bearing Fault Diagnosis and Machine Health Monitoring}, 
+      author={Rajeev Kumar},
+      year={2026},
+      eprint={2606.26317},
+      archivePrefix={arXiv},
+      primaryClass={eess.SP},
+      url={https://arxiv.org/abs/2606.26317}, 
 }
 ```
 PG-AMF: Physics-Guided Adaptive Moment Features for Bearing Fault Diagnosis 
 
-[![PG-AMF: Physics-Guided Adaptive Moment Features for Bearing Fault Diagnosis )]([https://www.sciencedirect.com/science/article/pii/S2352340919309904](https://arxiv.org/abs/2606.26317))
+[Mauscript:PG-AMF: Physics-Guided Adaptive Moment Features for Bearing Fault Diagnosis )]([https://www.sciencedirect.com/science/article/pii/S2352340919309904](https://arxiv.org/abs/2606.26317))
 ---
 
 ## License
